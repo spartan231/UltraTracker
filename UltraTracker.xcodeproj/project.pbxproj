@@ -6,6 +6,12 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		8F6D79612F08A270005D127C /* Auth in Frameworks */ = {isa = PBXBuildFile; productRef = 8F6D79602F08A270005D127C /* Auth */; };
+		8F6D79632F08A275005D127C /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = 8F6D79622F08A275005D127C /* Supabase */; };
+		8F6D79652F08A279005D127C /* PostgREST in Frameworks */ = {isa = PBXBuildFile; productRef = 8F6D79642F08A279005D127C /* PostgREST */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		8F6D792A2F070F6D005D127C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -65,6 +71,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F6D79652F08A279005D127C /* PostgREST in Frameworks */,
+				8F6D79632F08A275005D127C /* Supabase in Frameworks */,
+				8F6D79612F08A270005D127C /* Auth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +100,7 @@
 				8F6D791A2F070F6B005D127C /* UltraTracker */,
 				8F6D792C2F070F6D005D127C /* UltraTrackerTests */,
 				8F6D79362F070F6D005D127C /* UltraTrackerUITests */,
+				8F6D795F2F08A270005D127C /* Frameworks */,
 				8F6D79192F070F6B005D127C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -103,6 +113,13 @@
 				8F6D79332F070F6D005D127C /* UltraTrackerUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		8F6D795F2F08A270005D127C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +142,9 @@
 			);
 			name = UltraTracker;
 			packageProductDependencies = (
+				8F6D79602F08A270005D127C /* Auth */,
+				8F6D79622F08A275005D127C /* Supabase */,
+				8F6D79642F08A279005D127C /* PostgREST */,
 			);
 			productName = UltraTracker;
 			productReference = 8F6D79182F070F6B005D127C /* UltraTracker.app */;
@@ -208,6 +228,9 @@
 			);
 			mainGroup = 8F6D790F2F070F6B005D127C;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				8F6D795E2F08A248005D127C /* XCRemoteSwiftPackageReference "supabase-swift" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 8F6D79192F070F6B005D127C /* Products */;
 			projectDirPath = "";
@@ -630,6 +653,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8F6D795E2F08A248005D127C /* XCRemoteSwiftPackageReference "supabase-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/supabase/supabase-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.5.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8F6D79602F08A270005D127C /* Auth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8F6D795E2F08A248005D127C /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Auth;
+		};
+		8F6D79622F08A275005D127C /* Supabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8F6D795E2F08A248005D127C /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Supabase;
+		};
+		8F6D79642F08A279005D127C /* PostgREST */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8F6D795E2F08A248005D127C /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = PostgREST;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8F6D79102F070F6B005D127C /* Project object */;
 }
